@@ -69,32 +69,45 @@ body {
     right: 15%;
 }
 
-.nav>li>a {
+.nav > li > a {
     position: relative;
     display: block;
     padding: 15px 15px;
 }
 
 #search ul {
-    border-right:1px solid #ffffff;
-    padding-right:0;
+    border-right: 1px solid #ffffff;
+    padding-right: 0;
 }
 
-    #search .tab-menu {
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: 600;
-        
-    }
+#search .tab-menu {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}
 
-    #search i, img {
-        color: #ffffff;
-        font-size: 25px;
-        margin-right: 10px;
-    }
+#search i, img {
+    color: #ffffff;
+    font-size: 25px;
+    margin-right: 10px;
+}
 
-    #search hr {
-        margin: 0;
-        margin-left: 15%;
-        margin-right: 15%;
-    }
+#search hr {
+    margin: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#timepicker1, #timepicker2 {
+    background-color: #ffffff !important;
+}
+
+.bootstrap-timepicker-widget table td input {
+    width: 32px;
+}
+
+.btn-ara {
+    height: 120px;
+    background-color: #9CC2CB;
+    border-radius:5px;
+}

@@ -14,5 +14,20 @@ app.controller('homeController', ['$scope', function ($scope) {
         });
     });
 
-   
+    $('#timepicker1').timepicker({
+        minuteStep: 30,
+        showMeridian: false
+    });
+    $('#timepicker2').timepicker({
+        minuteStep: 30,
+        showMeridian: false
+    });
+
+    $(document).ready(function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-aero',
+            radioClass: 'iradio_square-aero',
+            increaseArea: '20%' // optional
+        });
+    });
 }]);
