@@ -24,22 +24,21 @@
             </span>
         </div>
     </div>
-    <div id="search">
-        <ul class="nav nav-pills nav-stacked col-md-3">
-            <li><a style="border-radius: 5px 0 0 0;" href="#a" class="tab-menu" data-toggle="tab"> <i class="fa fa-futbol-o"></i> Futbol</a> <hr /></li>
-
-            <li>
-                <a href="#b" class="tab-menu" data-toggle="tab">
-                    <img src="../../content/img/basket.png" /> Basketbol
-                </a> <hr />
-            </li>
-            <li>
-                <a href="#c" class="tab-menu" data-toggle="tab">
-                    <img src="../../content/img/tennis.png" />Tenis
-                </a>
-            </li>
-        </ul>
-
+    <div id="search" style="height:40%;">
+        <div class="form-group col-md-3" style="height:100%; border-right:1px solid;" >
+            <div class="input-group spor-check">
+                <input type="radio" name="iCheck" checked id="futbol">
+                <label for="futbol" style="padding-left:10px;"><i class="fa fa-futbol-o"></i> Futbol </label>
+            </div>
+            <div class="input-group spor-check">
+                <input type="radio" name="iCheck" id="basketbol">
+                <label for="basketbol" style="padding-left:10px;"><img src="../../content/img/basket.png" /> Basketbol</label>
+            </div>
+            <div class="input-group spor-check">
+                <input type="radio" name="iCheck" id="tenis">
+                <label for="tenis" style="padding-left:10px;"><img src="../../content/img/tennis.png" />Tenis</label>
+            </div>
+        </div>
 
         <div class="tab-content col-md-9" style="margin-top:15px;">
             <div class="tab-pane fade active in" id="a">
@@ -86,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group" >
+                    <div class="form-group">
                         <label class="col-sm-12">Servis Seçeneği</label>
                         <div class="input-group" style="padding-left:10px;">
                             <input type="radio" name="iCheck" checked id="farketmez">
@@ -100,10 +99,9 @@
                             <input type="radio" name="iCheck" id="yok">
                             <label for="yok" style="padding-left:10px;">Servis Yok</label>
                         </div>
-
-                    </div> 
+                    </div>
                 </form>
-                <div class="col-md-2" >
+                <div class="col-md-2">
                     <button class="btn btn-ara">ARA</button>
                     <button class="btn btn-sm btn-danger" style="margin-top:10px; width:100%; border-radius:5px;">Temizle</button>
                 </div>

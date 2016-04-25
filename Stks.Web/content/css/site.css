@@ -10,6 +10,7 @@ body {
     margin-bottom: 60px;
     padding-top: 40px;
     xpadding-bottom: 10px;
+    min-height: 100%;
 }
 
 
@@ -109,5 +110,17 @@ body {
 .btn-ara {
     height: 120px;
     background-color: #9CC2CB;
-    border-radius:5px;
+    border-radius: 5px;
+}
+
+.spor-check {
+    padding: 15px 0 0 10px;
+    height: 33%;
+    border-bottom: 1px solid;
+    width:100%;
+}
+
+.spor-check label{
+    font-size:20px;
+    font-weight:700;
 }
