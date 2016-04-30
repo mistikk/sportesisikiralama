@@ -1,0 +1,109 @@
+﻿body {
+    width: auto;
+}
+
+h3 {
+  display: inline-block;
+  padding: 10px;
+  background: #B9121B;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.p {
+  text-align: center;
+  padding-top: 40px;
+  font-size: 13px;
+}
+
+.select-sports {
+    padding-right: 50px;
+    border-right: 1px solid;
+}
+
+
+.text-muted {
+    margin: 20px 0;
+}
+
+#search {
+    color: #ffffff;
+    background-color: rgba(0, 140, 186, 0.85);
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 15%;
+    right: 15%;
+    padding: 5px 15px 5px 15px;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 15px 15px;
+}
+
+#search ul {
+    border-right: 1px solid #ffffff;
+    padding-right: 0;
+}
+
+#search .tab-menu {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#search i, img {
+    color: #ffffff;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+#search hr {
+    margin: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#timepicker1, #timepicker2 {
+    background-color: #ffffff !important;
+}
+
+.bootstrap-timepicker-widget table td input {
+    width: 32px;
+}
+
+.btn-ara {
+    height: 120px;
+    background-color: #9CC2CB;
+    border-radius: 5px;
+}
+
+.spor-check {
+    padding: 15px 0 0 10px;
+    height: 33%;
+    border-bottom: 1px solid;
+    width:100%;
+}
+
+.spor-check label{
+    font-size:20px;
+    font-weight:700;
+}
+
+.spor-check input {
+    
+}
+
+.carousel-indicators {
+    margin-bottom: auto!important;
+}
+
+
+    .carousel-indicators .active {
+
+        background-color:rgba(185, 18, 27, 0.62);
+        border:gray;
+    }
