@@ -144,9 +144,12 @@
     <Content Include="content\images\tennis.png" />
     <Content Include="content\images\twitterfeed.png" />
     <Content Include="content\img\basket.png" />
+    <Content Include="content\img\basketball-ball-dark-shadow-hd-1070770.jpg" />
+    <Content Include="content\img\football-stadium-1920x1080.jpg" />
     <Content Include="content\img\pelota-de-futbol-9716.jpg" />
     <Content Include="content\img\sam_0346.jpg" />
     <Content Include="content\img\social-networks-2.png" />
+    <Content Include="content\img\sports-football-field-night-light-goal-1920x1080.jpg" />
     <Content Include="content\img\tennis-courts-003-1600x900.jpg" />
     <Content Include="content\img\tennis.png" />
     <Content Include="content\js\signin.js" />
