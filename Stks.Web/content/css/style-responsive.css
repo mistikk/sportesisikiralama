@@ -1,0 +1,114 @@
+ Document: style-responsive Created on: 02-Apr-2013, 14:36:13 Author: Aslam Description: Purpose of the stylesheet follows. */
+ /* Large desktop */
+ 
+ @media (min-width: 1200px) {}
+ /* Portrait tablet to landscape and desktop */
+ 
+ @media (min-width: 768px) and (max-width: 979px) {
+     h2 {
+         font-size: 30px;
+         line-height: 30px;
+     }
+     .support-icon {
+         font-size: 50px;
+     }
+     .navbar-purity .navbar-inner {
+         background: rgba(46, 46, 46, 0.7);
+     }
+     .navbar-purity .nav > li > a {
+         padding: 10px;
+     }
+     .nav-purity .dropdown-menu {
+         background-color: #383838;
+         margin: 0;
+         padding-bottom: 5px;
+     }
+     header {
+         padding-top: 50px;
+     }
+     #navigation .nav.page li.active:after {
+         display: none;
+     }
+ }
+ /* Landscape phone to portrait tablet */
+ 
+ @media (max-width: 767px) {
+     .post-img .icons {
+         padding-top: 40px;
+     }
+     .home h1 {
+         font-size: 50px;
+     }
+     .home {
+         padding: 0px;
+     }
+     .container {
+         padding-left: 20px;
+         padding-right: 20px;
+     }
+     #navigation .nav.page li.active:after {
+         display: none;
+     }
+ }
+ @media (max-width: 570px) {
+     #navigation .nav.page li.active:after {
+         display: none;
+     }
+     .carousel-control.left {
+         left: 0;
+     }
+     .carousel-control.right {
+         right: 0;
+     }
+ }
+ /* Landscape phones and down */
+ 
+ @media (max-width: 480px) {
+     #portfolio #filters li {
+         font-size: 20px;
+         margin: 0;
+     }
+     .post-img:hover .icons{
+        padding: 60px 200px;
+     }
+     .support-icon{
+        text-align: center;
+     }
+     #navigation .nav.page li.active:after {
+         display: none;
+     }
+     ul.slides {
+         padding-top: 20px;
+     }
+     .flexslider li h1 {
+         font-size: 40px;
+     }
+     .flexslider li h1 i {
+         font-size: 2em;
+     }
+     .navbar-purity, .navbar-purity.sticky {
+         background: #464646;
+     }
+     .form-menu input[type=text], .form-menu input[type=password] {
+         width: 100%;
+         border-color: #5a5a5a;
+     }
+     h2 {
+         font-size: 36px;
+     }
+     #testimonials-background h1, #support-banner h1, #features-banner h1, #contact-background h1 {
+         font-size: 45px;
+     }
+     #home-arrow {
+         bottom: 50px;
+     }
+     header {
+         padding-top: 30px;
+     }
+ }
+ .navbar-collapse {
+     border-top: none;
+ }
+ iframe, object, embed {
+     max-width: 100%;
+ }

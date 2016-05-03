@@ -1,73 +1,153 @@
 ﻿<!DOCTYPE html>
-<html data-ng-app="AngularAuthApp">
+<html lang="en" class="csstransforms csstransforms3d csstransitions" data-ng-app="AngularAuthApp" style="overflow-y: hidden;">
 <head>
     <meta name="keywords" content="angularjs,SPA,Single Page Application,refresh tokens,authentication,bearer token authentication,OWIN,bootstrap,bootstrap ui,tutorial,JS framework,ASP.NET WEB API 2,Taiseer Joudeh" />
     <meta name="description" content="SPA built using angularjs,authentication is done using bearer token,back end built using Asp.net web api 2 and OWIN Framework,creatd by Taiseer Joudeh" />
     <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
     <title>AngularJS Authentication</title>
-    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+
 
     <!--Plugins-->
     <link href="content/css/bootstrap-datepicker3.css" rel="stylesheet" />
     <link href="content/css/bootstrap-timepicker.css" rel="stylesheet" />
-    <link href="content/css/iCheck/aero.css" rel="stylesheet" />
 
-    <link href="content/css/site.css" rel="stylesheet" />
-    <link href="content/css/loading-bar.css" rel="stylesheet" />
-    <link href="content/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="content/css/social-buttons.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="content/css/iCheck/aero.css" rel="stylesheet" />
+    <!--
+        new
+    -->
+
+
+    <!-- angular meterial -->
+
+
+    <!-- angular meterial -->
+
+    <link href="content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="content/css/font-awesome.min.css" rel="stylesheet" media="all" type="text/css" />
+    <link href="content/openicons/font/css/open-iconic-bootstrap.css" rel="stylesheet" />
+    <link href="content/css/jquery.fancybox.css" rel="stylesheet" media="all" type="text/css" />
+    <link href="content/css/jquery.fancybox-thumbs.css" rel="stylesheet" type="text/css" />
+    <link href="content/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="content/css/isotope.css" rel="stylesheet" type="text/css" />
+    <link href="content/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="content/css/style-responsive.css" rel="stylesheet" type="text/css" />
+
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    <!-- home page search vs css dosyası -->
+    <link href="content/css/homepage.css" rel="stylesheet" />
+
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-ng-controller="indexController">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="btn btn-success navbar-toggle" data-ng-click="navbarExpanded = !navbarExpanded">
-                    <span class="glyphicon glyphicon-chevron-down"></span>
-                </button>
-                <a class="navbar-brand" href="#/">Spor Tesisi Kiralama Sistemi</a>
-            </div>
-            <div class="collapse navbar-collapse" data-collapse="!navbarExpanded">
-                <ul class="nav navbar-nav navbar-right">
-                    <li data-ng-hide="!authentication.isAuth"><a href="#">Welcome {{authentication.userName}}</a></li>
-                    <li data-ng-hide="!authentication.isAuth"><a href="#/orders">My Orders</a></li>
-                    <li data-ng-hide="!authentication.isAuth"><a href="#/refresh">Refresh Token</a></li>
-                    <li data-ng-hide="!authentication.isAuth"><a href="" data-ng-click="logOut()">Logout</a></li>
-                    <li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
-                    <li data-ng-hide="authentication.isAuth"> <a href="#/signup">Sign Up</a></li>
-                </ul>
-            </div>
+    <header>
+
+        <!-- preloader -->
+        <div class="preloading" style="display: none;">
+            <img class="loading-gif" src="content/images/fancy-loading.gif" alt="preloader">
         </div>
-    </div>
+
+        <!-- This section is for Splash Screen -->
+        <!--################ NAVIGATION START ################-->
+        <div class="navbar-wrapper">
+            <nav class="navbar navbar-default navbar-fixed-top navbar-purity" role="navigation">
+                <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="content/images/logo.png" width="150" id="logokhan" alt="...">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-navbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active">
+                                <a href="#top">Anasayfa</a>
+                            </li>
+                            <li class="">
+                                <a href="#features">Spor</a>
+                            </li>
+                            <li class="">
+                                <a href="#support">Kurumsal</a>
+                            </li>
+                            <li class="">
+                                <a href="#testimonials">Biz</a>
+                            </li>
+                            <li class="">
+                                <a href="#contact">İletişim</a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="modal" href="#signUpModal" class="">Kayıt</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">Giriş <b class="caret"></b></a>
+                                <div class="dropdown-menu" style="padding: 15px;">
+                                    <form role="form" class="form-menu">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Username">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Password">
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="text-muted">
+                                                <input type="checkbox">Remember me
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="btn btn-block btn-purity">Submit</button>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+            </nav>
+        </div>
+        <div id="home-arrow" class="hidden-phone">
+            <a href="#features"><i class="icon-double-angle-down icon-3x" id="iconHome"></i></a>
+        </div>
+    </header>
+
+
     <div data-ng-view="">
     </div>
-    <hr />
-    <div id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="text-muted">Created by Taiseer Joudeh. Twitter: <a target="_blank" href="http://twitter.com/tjoudeh">@tjoudeh</a></p>
-                </div>
-                <div class="col-md-6">
-                    <p class="text-muted">Taiseer Joudeh Blog: <a target="_blank" href="http://bitoftech.net">bitoftech.net</a></p>
-                </div>
-            </div>
-        </div>
+
+
+
+
+
+
+
+    <div id="back-to-top" style="display: none;">
+        <a class="back-to-top" href="#top"><i class="fa fa-arrow-up"></i></a>
     </div>
+    <!--################ FOOTER END ################-->
+    <!--################ JAVASCRIPTS ################-->
+    <!-- Placed at the end of the document so the pages load faster -->
     <!-- 3rd party libraries -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
     <script src="scripts/angular-local-storage.min.js"></script>
     <script src="scripts/loading-bar.min.js"></script>
-    <script src="scripts/jquery-2.2.2.min.js"></script>
-    
+
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="scripts/bootstrap-datepicker.js"></script>
     <script src="scripts/bootstrap-datepicker.tr.min.js"></script>
     <script src="scripts/bootstrap-timepicker.js"></script>
-    <script src="scripts/icheck.min.js"></script>
+ 
 
-    <script src="scripts/site.js"></script>
+
+
     <!-- Load app main script -->
     <script src="app/app.js?v=2"></script>
     <!-- Load services -->
@@ -86,5 +166,57 @@
     <script src="app/controllers/associateController.js?v=2"></script>
     <!-- Load custom filters -->
     <!-- Load custom directives -->
+    <!-- newwwwwwwwwwwwwwwwwww-->
+
+    <div class="fit-vids-style">
+        ­
+        <style>
+            .fluid-width-video-wrapper {
+                width: 100%;
+                position: relative;
+                padding: 0;
+            }
+
+                .fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+        </style>
+    </div>
+    <script src="scripts/jquery.js"></script>
+
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/jquery.fitvids.js"></script>
+    <script src="scripts/jquery.easing.1.3.js"></script>
+
+    <script type="text/javascript" src="content/twitter/jquery.tweet.js"></script>
+    <script type="text/javascript" src="scripts/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="scripts/jquery.fancybox-thumbs.js"></script>
+    <script type="text/javascript" src="scripts/jquery.fancybox-media.js"></script>
+
+    <script src="scripts/stellar.js"></script>
+    <script src="scripts/nicescroll.min.js"></script>
+    <script src="scripts/jquery.isotope.min.js"></script>
+    <script src="scripts/custom.js"></script>
+    <script src="scripts/custom-home.js"></script>
+    <script src="scripts/portfolio.js"></script>
+    <script src="scripts/jquery.flexslider.js"></script>
+    <script src="scripts/retina.js"></script>
+    <!-- ajax contact form script -->
+    <script src="scripts/mail.js"></script>
+    <!-- Preloader script -->
+
+
+    <div id="ascrail2000" style="width: 5px; z-index: 9000; position: fixed; top: 0; height: 100%; right: 0; opacity: 0;">
+        <div style="position: relative; top: 0; float: right; width: 5px; height: 85px; border: 0 solid rgb(255, 255, 255); border-radius: 5px; background-color: rgb(37, 39, 43); background-clip:padding-box;"></div>
+
+    </div>
+
+
+    <script src="scripts/icheck.min.js"></script>
+
 </body>
 </html>
