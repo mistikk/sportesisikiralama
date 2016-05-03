@@ -14,6 +14,12 @@ namespace AngularJSAuthentication.API.Models
     
     public partial class Tesisler
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Tesisler()
+        {
+            this.TesisKiralama = new HashSet<TesisKiralama>();
+        }
+    
         public int Id { get; set; }
         public string tesisAdi { get; set; }
         public string sahaAdi { get; set; }
@@ -25,8 +31,11 @@ namespace AngularJSAuthentication.API.Models
         public Nullable<bool> servis { get; set; }
         public string resim { get; set; }
         public Nullable<int> saatDilimi { get; set; }
-        public string acilisSaati { get; set; }
-        public string kapanisSaati { get; set; }
+        public Nullable<System.TimeSpan> acilisSaati { get; set; }
+        public Nullable<System.TimeSpan> kapanisSaati { get; set; }
         public Nullable<int> ucret { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TesisKiralama> TesisKiralama { get; set; }
     }
 }

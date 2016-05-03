@@ -12,7 +12,7 @@ namespace AngularJSAuthentication.API.Controllers
     [RoutePrefix("api/tesis")]
     public class TesisController : ApiController
     {
-        private SporTesisiEntities db = new SporTesisiEntities();
+        private SportesisiEntities db = new SportesisiEntities();
         // POST: odata/Tesis
         [Route("save")]
         public IHttpActionResult Save(Tesisler tesisler)
@@ -49,12 +49,30 @@ namespace AngularJSAuthentication.API.Controllers
             {
                 return BadRequest(ModelState);
             }
-            IEnumerable<Tesisler> tesisler = db.Tesisler.Where( x => x.sporTuru == searchModel.sporTuru && 
-                                                                x.il == searchModel.il &&
-                                                                x.ilce == searchModel.ilce &&
-                                                                x.servis == searchModel.servis);
+            List<Tesisler> tesisler = db.Tesisler.Where(x => x.sporTuru == searchModel.sporTuru &&
+                                                             x.il == searchModel.il &&
+                                                             x.ilce == searchModel.ilce &&
+                                                             x.servis == searchModel.servis).ToList();
 
-            return Ok(searchModel);
+            List<Tesisler> bosListe = new List<Tesisler>();
+
+            foreach (var item in tesisler)
+            {
+                List<TesisKiralama> sa = db.TesisKiralama.Where(x => x.tesisId == item.Id &&
+                                                x.tarih >= searchModel.tarih1 &&
+                                                x.tarih <= searchModel.tarih2 &&
+                                                x.baslangicSaati >= searchModel.saat1 &&
+                                                x.bitisSaati <= searchModel.saat2).ToList();
+                if (sa.Count == 0)
+                {
+                    bosListe.Add(item);
+                }
+            }
+            
+
+
+
+            return Ok(bosListe);
         }
 
         private bool TesislerExists(int key)

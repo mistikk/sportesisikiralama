@@ -181,6 +181,12 @@
       <DependentUpon>StksModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SearchModel.cs" />
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>StksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>StksModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\StksModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -195,6 +201,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StksModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>StksModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TesisKiralama.cs">
       <DependentUpon>StksModel.tt</DependentUpon>

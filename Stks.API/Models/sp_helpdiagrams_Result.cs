@@ -10,17 +10,13 @@
 namespace AngularJSAuthentication.API.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class TesisKiralama
+    public partial class sp_helpdiagrams_Result
     {
-        public int Id { get; set; }
-        public Nullable<int> tesisId { get; set; }
-        public string kullaniciId { get; set; }
-        public Nullable<System.DateTime> tarih { get; set; }
-        public Nullable<System.TimeSpan> baslangicSaati { get; set; }
-        public Nullable<System.TimeSpan> bitisSaati { get; set; }
-    
-        public virtual Tesisler Tesisler { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

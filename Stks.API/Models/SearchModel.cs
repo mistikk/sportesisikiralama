@@ -12,8 +12,8 @@ namespace AngularJSAuthentication.API.Models
         public string ilce { get; set; }
         public DateTime tarih1 { get; set; }
         public DateTime tarih2 { get; set; }
-        public int saat1 { get; set; }
-        public int saat2 { get; set; }
+        public TimeSpan saat1 { get; set; }
+        public TimeSpan saat2 { get; set; }
         public bool servis { get; set; }
     }
 }
