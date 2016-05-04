@@ -72,9 +72,16 @@
 
 }
 
+/* 
+    date picker bacground
+*/
+.table-condensed{
+    background-color:#ffffff;
+}
+
 .result {
         color: #ffffff;
-    background-color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.51);
 
     position: absolute;
     padding-right:100px;
