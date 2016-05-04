@@ -71,6 +71,11 @@
 }
 
 }
+.btn-search:hover {
+    background-color:rgba(59, 59, 59, 0.93);
+    color:white;
+
+}
 
 /* 
     date picker bacground
