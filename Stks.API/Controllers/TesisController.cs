@@ -68,12 +68,27 @@ namespace AngularJSAuthentication.API.Controllers
                     bosListe.Add(item);
                 }
             }
-            
-
-
-
             return Ok(bosListe);
         }
+
+        //[Route("Sa")]
+        //public IHttpActionResult sa()
+        //{
+        //    List<int> NumberList = new List<int>();
+        //    NumberList.AddRange(new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        //    int totalNumber = 0;
+        //    foreach (var item in NumberList)
+        //    {
+        //        totalNumber += item;
+        //        if (item == 2)
+        //        {
+        //            NumberList.RemoveRange(0, item);
+        //        }
+        //    }
+
+        //    return Ok(totalNumber);
+        //}
+
 
         private bool TesislerExists(int key)
         {
