@@ -66,19 +66,19 @@
             <div class="row form-group form-groupfirst">
                 <div class="col-md-4">
                     <div class="input-group spor-check col-md-12 col-xs-4 col-sm-4">
-                        <input type="radio" name="iCheck" checked id="futbol">
+                        <input type="radio" name="sporTuru" checked id="futbol">
                         <label for="futbol"><i class="fa fa-futbol-o"></i> Halı Saha </label>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="input-group spor-check col-md-12 col-xs-4 col-sm-4">
-                        <input type="radio" name="iCheck" id="basketbol">
+                        <input type="radio" name="sporTuru" id="basketbol">
                         <label for="basketbol" ><img src="../../content/img/basket.png" /> Basket Sahası</label>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="input-group spor-check col-md-12 col-xs-4 col-sm-4">
-                        <input type="radio" name="iCheck" id="tenis">
+                        <input type="radio" name="sporTuru" id="tenis">
                         <label for="tenis"><img src="../../content/img/tennis.png" />Tenis Kortu</label>
                     </div>
                 </div>
@@ -88,14 +88,14 @@
              <div class="col-md-2"></div>
 
 
-            <div class="tab-content col-md-10 col-sm-12 col-xs-12 search-texts" style="margin-top:15px;" ng-init="load();">
+            <div class="col-md-10 col-sm-12 col-xs-12 search-texts" style="margin-top:15px;" ng-init="load();">
                 <div class="tab-pane fade active in" id="a">
                     <form class="form-horizontal col-md-5">
                         <div class="form-group">
                             <label class="col-sm-1 ">İl</label>
                             <div class="col-sm-10">
-                                <select class="form-control" ng-model="iller" ng-options="city.sehir for city in cities track by city.id"
-                                        ng-change="getDistrict(iller.id);">
+                                <select class="form-control" ng-model="formdata.il" ng-options="city.sehir for city in cities track by city.id"
+                                        ng-change="getDistrict(formdata.il.id);">
                                     <option value="">İl Seçiniz..</option>
                                 </select>
                             </div>
@@ -103,7 +103,7 @@
                         <div class="form-group">
                             <label class="col-sm-1 ">İlçe</label>
                             <div class="col-sm-10">
-                                <select class="form-control" ng-model="ilceler" ng-options="district.ilce for district in districts track by district.id">
+                                <select class="form-control" ng-model="formdata.ilce" ng-options="district.ilce for district in districts track by district.id">
                                     <option value="">İlçe Seçiniz..</option>
                                 </select>
                             </div>
