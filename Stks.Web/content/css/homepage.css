@@ -87,6 +87,15 @@
 .table-condensed{
     background-color:#ffffff;
 }
+.bootstrap-timepicker-widget.dropdown-menu.open {
+    background-color:#fff;
+}
+/* 
+    boyut farkından dolayı yeniden boyutlandırılı.
+*/
+.clock .fa-clock-o {
+    font-size:24px !important;
+}
 
 .result {
         color: #ffffff;
@@ -105,6 +114,10 @@
     height:100%;
 }
 
+.services-change .input-group  label{
+
+    padding-left:10px;
+}
 
 .nav > li > a {
     position: relative;
