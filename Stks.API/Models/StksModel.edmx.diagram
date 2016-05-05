@@ -20,6 +20,8 @@
         <AssociationConnector Association="sportesisiModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="sportesisiModel.FK_TesisKiralama_Tesisler" ManuallyRouted="false" />
         <AssociationConnector Association="sportesisiModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="sportesisiModel.ilceler" Width="1.5" PointX="10.375" PointY="3.75" />
+        <EntityTypeShape EntityType="sportesisiModel.iller" Width="1.5" PointX="5.375" PointY="10.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

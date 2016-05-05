@@ -1,5 +1,5 @@
 ﻿'use strict';
-app.controller('homeController', ['$scope', function ($scope) {
+app.controller('homeController', ['$scope', 'loadService', function ($scope, loadService) {
 
     $scope.today = "06/04/2016";
 
@@ -30,4 +30,25 @@ app.controller('homeController', ['$scope', function ($scope) {
             increaseArea: '20%' // optional
         });
     });
+
+    ////////////////////////////////////////////
+    $scope.iller = "sa";
+    $scope.load = function () {
+        console.log("sa");
+        loadService.getCities().then(function (results) {
+            $scope.cities = results.data;
+        }, function (error) {
+            console.log("hataaaaaaa.");
+            //alert(error.data.message);
+        });
+    };
+
+    $scope.getDistrict = function (ilKodu) {
+        loadService.getDistricts(ilKodu).then(function (results) {
+            $scope.districts = results.data;
+        }, function (error) {
+            console.log("hataaaaaaa.");
+            //alert(error.data.message);
+        });
+    };
 }]);

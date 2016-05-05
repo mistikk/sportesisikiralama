@@ -38,6 +38,8 @@ namespace AngularJSAuthentication.API.Models
         public virtual DbSet<TesisKiralama> TesisKiralama { get; set; }
         public virtual DbSet<Tesisler> Tesisler { get; set; }
         public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
+        public virtual DbSet<ilceler> ilceler { get; set; }
+        public virtual DbSet<iller> iller { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
