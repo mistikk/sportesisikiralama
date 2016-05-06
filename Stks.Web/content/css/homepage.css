@@ -97,22 +97,35 @@
     font-size:24px !important;
 }
 
+/* resould bölümü data table listeleme*/
+
 .result {
         color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.51);
+    background-color: white;
 
     position: absolute;
     padding-right:100px;
     top:0;
     bottom:0;
-    left: 14.1%;
-    right: 14.1%;
+    left: 19.2%;
+    right: 19.2%;
 
 }
 .res-img img{
     width:100%;
     height:100%;
 }
+
+.number-res{
+    text-align:center;
+}
+.res-company {
+    background-color:red;
+
+
+position:absolute;
+}
+
 
 .services-change .input-group  label{
 
