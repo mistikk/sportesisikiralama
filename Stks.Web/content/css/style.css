@@ -478,7 +478,7 @@ a.post-entry:hover {
     background-attachment: fixed;
     background-color: #F0FCFF;
     padding: 150px 0;
-    text-shadow: 1px 1px 1px #000;
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
