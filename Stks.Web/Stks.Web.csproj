@@ -66,6 +66,7 @@
     <Content Include="app\controllers\refreshController.js" />
     <Content Include="app\controllers\signupController.js" />
     <Content Include="app\controllers\tokensManagerController.js" />
+    <Content Include="app\directives\icheck.js" />
     <Content Include="app\services\authInterceptorService.js" />
     <Content Include="app\services\authService.js" />
     <Content Include="app\services\loadService.js" />
@@ -299,6 +300,7 @@
     <Content Include="scripts\jquery.fancybox.pack.js" />
     <Content Include="scripts\jquery.fitvids.js" />
     <Content Include="scripts\jquery.flexslider.js" />
+    <Content Include="scripts\jquery.icheck.js" />
     <Content Include="scripts\jquery.isotope.min.js" />
     <Content Include="scripts\jquery.js" />
     <Content Include="scripts\loading-bar.min.js" />
