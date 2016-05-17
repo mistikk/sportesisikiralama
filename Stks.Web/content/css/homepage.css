@@ -52,71 +52,97 @@
 
 #search {
     color: rgba(0, 0, 0, 0.82);
-    background-color: rgba(255, 255, 255, 0.67);
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 5px 5px 0 0;
     position: absolute;
     z-index: 100;
     bottom: 0;
-    left: 15%;
-    right: 15%;
-
+    left: 20%;
+    right: 20%;
 }
 
 @media screen and (max-width:460px) {
     #search {
-     background-color: rgba(255, 255, 255, 0.67);
-    left: 0;
-    right: 0;
-
+        background-color: rgba(255, 255, 255, 0.67);
+        left: 0;
+        right: 0;
+    }
 }
 
-}
 .btn-search:hover {
-    background-color:rgba(59, 59, 59, 0.93);
-    color:white;
-
+    background-color: rgba(59, 59, 59, 0.93);
+    color: white;
 }
 
 .iCheck-helper:hover {
-    background-color:red !important;
+    background-color: red !important;
 }
 
 /* 
     date picker bacground
 */
-.table-condensed{
-    background-color:#ffffff;
+.table-condensed {
+    background-color: #ffffff;
 }
+
 .bootstrap-timepicker-widget.dropdown-menu.open {
-    background-color:#fff;
+    background-color: #fff;
 }
 /* 
     boyut farkından dolayı yeniden boyutlandırılı.
 */
 .clock .fa-clock-o {
-    font-size:24px !important;
+    font-size: 24px !important;
 }
+
+/* resould bölümü data table listeleme*/
 
 .result {
-        color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.51);
-
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.44);
     position: absolute;
-    padding-right:100px;
-    top:0;
-    bottom:0;
-    left: 14.1%;
-    right: 14.1%;
-
-}
-.res-img img{
-    width:100%;
-    height:100%;
+    padding-right: 100px;
+    top: 0;
+    bottom: 0;
+    left: 19.2%;
+    right: 19.2%;
 }
 
-.services-change .input-group  label{
+.res {
+    color: black;
+}
 
-    padding-left:10px;
+    .res thead {
+          background-color: rgba(255, 255, 255, 0.78);
+    }
+
+.result table {
+   
+}
+.res tfoot {
+    color:white ;
+    background-color:none;
+}
+   .res table {
+
+   }
+.res-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.number-res {
+    text-align: center;
+}
+
+.res-company {
+    background-color: red;
+    position: absolute;
+}
+
+
+.services-change .input-group label {
+    padding-left: 10px;
 }
 
 .nav > li > a {
@@ -165,45 +191,41 @@
 .spor-check {
     padding: 15px 0 0 10px;
     height: 15%;
-
-    width:200px;
+    width: 200px;
 }
 
-.spor-check label{
-    font-size:17px;
-    font-weight:700;
-    cursor:pointer;
-
-}
+    .spor-check label {
+        font-size: 17px;
+        font-weight: 700;
+        cursor: pointer;
+    }
 
 
 
 .form-groupfirst {
-
-    height:100%;
-    padding-left:20%;
-    padding-right:20%;
-
+    height: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
-.input-group-addon i  {
-    color:black !important;
-    margin-right:1px !important;
-    padding:2px !important;
+.input-group-addon i {
+    color: black !important;
+    margin-right: 1px !important;
+    padding: 2px !important;
 }
+
 .input-group-addon {
-    padding:1px !important;
+    padding: 1px !important;
 }
 
-.customhome-btn{
-    margin-top:20px;
-     color:#fff;
-     padding:8px;
-     width:100%;
-     font-size:15px;
+.customhome-btn {
+    margin-top: 20px;
+    color: #fff;
+    padding: 8px;
+    width: 50%;
+    font-size: 15px;
 }
 
-.btn-flickr{
-    color:black;
+.btn-flickr {
+    color: black;
 }
-

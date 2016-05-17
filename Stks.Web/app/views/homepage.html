@@ -1,5 +1,4 @@
-﻿
-<div id="wrap">
+﻿<div id="wrap">
     <!--################ HEADER START ################-->
     <header id="top" data-stellar-background-ratio="0" style="height: 809px;">
         <div class="container home">
@@ -58,8 +57,6 @@
 
         </div> -->
 
-
-
         <div id="search" class="searc row">
 
 
@@ -78,7 +75,7 @@
                 <div class="col-md-2 col-xs-12 col-sm-12">
                     <div class="row">
                         <div class="input-group spor-check">
-                            <input icheck ng-model="formdata.sporturu" value="futbol" checked id="futbol" type="radio" >
+                            <input icheck ng-model="formdata.sporturu" value="futbol" checked id="futbol" type="radio">
                             <label for="futbol">  &nbsp; Halı Saha </label>
                         </div>
                     </div>
@@ -165,16 +162,16 @@
 
                             <div class="col-sm-11">
                                 <!--
-                                        <div class="input-group ">
-                                            <div class="input-group bootstrap-timepicker timepicker ">
-                                                <input id="timepicker1" type="text" class="form-control input-small input-group-addon">
-                                            </div>
-                                            <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
-                                            <div class="input-group bootstrap-timepicker timepicker ">
-                                                <input id="timepicker2" type="text" class="form-control input-small input-group-addon">
-                                            </div>
+                                    <div class="input-group ">
+                                        <div class="input-group bootstrap-timepicker timepicker ">
+                                            <input id="timepicker1" type="text" class="form-control input-small input-group-addon">
                                         </div>
-                                -->
+                                        <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                        <div class="input-group bootstrap-timepicker timepicker ">
+                                            <input id="timepicker2" type="text" class="form-control input-small input-group-addon">
+                                        </div>
+                                    </div>
+                            -->
                                 <button ng-click="ara();" class="btn btn-sm btn-search btn-gray customhome-btn pull-left">Ara</button>
                                 <button class="btn btn-sm btn-flickr customhome-btn pull-right">Temizle</button>
 
@@ -193,12 +190,66 @@
 
     <section id="features">
 
-        <div id="features-banner" data-stellar-background-ratio="0">
+        <div id="features-banner">
 
 
             <div class="result">
-                <div class="row res">
+                <div class="row res container">
+                    <table id="example" class="display nowrap dataTable dtr-inline">
+                        <thead>
+                            <tr role="row">
+                                <th class="sorting_asc">Name</th>
+                                <th class="sorting">Name</th>
+                                <th class="sorting">Name</th>
+                                <th class="sorting">Name</th>
+                                <th class="sorting">Name</th>
+                                <th class="sorting_1"></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr><th colspan="6"> Arama kriterleriniz için 3 sonuç bulundu.</th> </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr role="row" class="odd">
+                                <td class="sorting_1">Evin Halı Saha</td>
+                                <td>22:30 - 23:30</td>
+                                <td>12 Mart 1970</td>
+                                <td class=" dt-body-right">33</td>
+                                <td>2008/11/28</td>
+                                <td class=" dt-body-right"><button class="btn btn-success">Rezervasyon</button></td>
+                            </tr>
+                            <tr role="row" class="even">
+                                <td class="sorting_1">Zngelica Ramos</td>
+                                <td>Chief Executive Officer (CEO)</td>
+                                <td>London</td>
+                                <td class=" dt-body-right">47</td>
+                                <td>2009/10/09</td>
+                                <td class=" dt-body-right">$1,200,000</td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td class="sorting_1">Ashton Cox</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td class=" dt-body-right">66</td>
+                                <td>2009/01/12</td>
+                                <td class=" dt-body-right">$86,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
+                </div>
+                <div class="row number-res">
+                    <nav>
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
 
@@ -254,7 +305,4 @@
     </section>
 
 </div>
-
-
-
 
