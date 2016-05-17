@@ -7,6 +7,10 @@ app.config(function ($routeProvider) {
         controller: "homeController",
         templateUrl: "/app/views/homepage.html"
     });
+    $routeProvider.when("/details", {
+        controller: "",
+        templateUrl: "/app/views/details.html"
+    });
 
     $routeProvider.when("/home", {
         controller: "homeController",

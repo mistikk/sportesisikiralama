@@ -73,6 +73,7 @@
     <Content Include="app\services\ordersService.js" />
     <Content Include="app\services\tokensManagerService.js" />
     <Content Include="app\views\associate.html" />
+    <Content Include="app\views\details.html" />
     <Content Include="app\views\home.html" />
     <Content Include="app\views\homepage.html" />
     <Content Include="app\views\login.html" />
@@ -139,6 +140,7 @@
     <Content Include="content\images\header2.jpg" />
     <Content Include="content\images\logo.png" />
     <Content Include="content\images\person.png" />
+    <Content Include="content\images\product-01-270x400.png" />
     <Content Include="content\images\responsive.png" />
     <Content Include="content\images\sky.jpg" />
     <Content Include="content\images\social-networks.png" />
