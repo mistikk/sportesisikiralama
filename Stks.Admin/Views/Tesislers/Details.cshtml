@@ -1,0 +1,122 @@
+﻿@model Stks.Admin.Tesisler
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tesis Detayı</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tesisAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tesisAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sahaAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sahaAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sporTuru)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sporTuru)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.il)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.il)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ilce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ilce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.servis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.servis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.resim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.resim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.saatDilimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.saatDilimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.acilisSaati)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.acilisSaati)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kapanisSaati)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kapanisSaati)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ucret)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ucret)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Tesis Listesine Geri Dön", "Index")
+</p>

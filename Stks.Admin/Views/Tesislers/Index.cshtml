@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Stks.Admin.Tesisler>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tesis Listesi</h2>
+
+<p>
+    @Html.ActionLink("Yeni Tesis Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tesisAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sahaAdi)
+        </th>
+        <th class="hidden-xs">
+            @Html.DisplayNameFor(model => model.sporTuru)
+        </th>
+        <th class="hidden-xs">
+            @Html.DisplayNameFor(model => model.il)
+        </th>
+        <th class="hidden-xs">
+            @Html.DisplayNameFor(model => model.ilce)
+        </th>
+        <th class="hidden-xs">
+            @Html.DisplayNameFor(model => model.servis)
+        </th>
+        <th class="hidden-xs">
+            @Html.DisplayNameFor(model => model.ucret)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tesisAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sahaAdi)
+        </td>
+        <td class="hidden-xs">
+            @Html.DisplayFor(modelItem => item.sporTuru)
+        </td>
+        <td class="hidden-xs">
+            @Html.DisplayFor(modelItem => item.il)
+        </td>
+        <td class="hidden-xs">
+            @Html.DisplayFor(modelItem => item.ilce)
+        </td>
+        <td class="hidden-xs">
+            @Html.DisplayFor(modelItem => item.servis)
+        </td>
+        <td class="hidden-xs">
+            @Html.DisplayFor(modelItem => item.ucret)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detay", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
