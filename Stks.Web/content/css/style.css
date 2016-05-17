@@ -3012,3 +3012,10 @@ section.typography {
 .back-to-top i {
     color: #fff;
 }
+
+.details-list{
+    list-style:none;
+}
+.details-list li{
+    margin-top:12px;
+}
