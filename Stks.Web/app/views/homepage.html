@@ -192,21 +192,28 @@
 
         <div id="features-banner">
 
+            <!--
+            <div class="result row">
 
+<<<<<<< HEAD
             <div class="result" ng-if="result != null">
                 <div class="row res container">
+=======
+                <div class="row res  col-md-12">
+>>>>>>> 2c9146fcf4335d6032a16bdf362e9fc66f3b116a
                     <table id="example" class="display nowrap dataTable dtr-inline">
                         <thead>
                             <tr role="row">
-                                <th class="sorting_asc">Name</th>
-                                <th class="sorting">Name</th>
-                                <th class="sorting">Name</th>
-                                <th class="sorting">Name</th>
-                                <th class="sorting">Name</th>
+                                <th class="sorting_as">Nerde</th>
+                                <th class="sorting">Kaç kaç</th>
+                                <th class="sorting">Ne zaman</th>
+                                <th class="sorting hidden-xs">Yer</th>
+                                <th class="sorting hidden-xs">Servis</th>
                                 <th class="sorting_1"></th>
                             </tr>
                         </thead>
                         <tfoot>
+<<<<<<< HEAD
                             <tr><th colspan="6"> Arama kriterleriniz için {{result.length}} sonuç bulundu.</th> </tr>
                         </tfoot>
                         <tbody>
@@ -218,25 +225,88 @@
                                 <td>{{tesis.ucret}}</td>
                                 <td class=" dt-body-right"><button class="btn btn-success">Rezervasyon</button></td>
                             </tr>
-                        </tbody>
-                    </table>
-
-                </div>
-                <div class="row number-res">
+=======
+                            <tr><th colspan="5"> Arama kriterleriniz için 2 sonuç bulundu.</th><th>
+                                <div class="row number-res">
                     <nav>
                         <ul class="pagination">
                             <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
                             <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
+
                             <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
                         </ul>
                     </nav>
-                </div>
-            </div>
+                </div></th></tr>
+                        </tfoot>
+                        <tbody>
+                            <tr role="row" class="odd">
+                                <td class="sorting_1">Evin Halı Saha</td>
+                                <td>22:30 - 23:30</td>
+                                <td>12 Mart 1970</td>
+                                <td class="hidden-xs">Serdivan</td>
+                                <td class="hidden-xs">Var</td>
+                                <td class=" dt-body-right"><button class="btn btn-success">Rezervasyon</button></td>
+                            </tr>
+                            <tr role="row" class="even">
+                                <td class="sorting_1">Söğütlü Halı Saha</td>
+                                <td>22:30 - 23:30</td>
+                                <td>12 Mart 1970</td>
+                                <td>Söğütlü</td>
+                                <td>Var</td>
+                                <td class=" dt-body-right"><button class="btn btn-success">Rezervasyon</button></td>
+                            </tr>
 
+>>>>>>> 2c9146fcf4335d6032a16bdf362e9fc66f3b116a
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+                                                      -->
+            <div class="searc row search" ng-if="result != null">
+
+                <table id="example" class="display nowrap dataTable dtr-inline">
+                    <thead>
+                        <tr role="row">
+                            <th class="sorting_as">Nerde</th>
+                            <th class="sorting">Kaç kaç</th>
+                            <th class="sorting">Ne zaman</th>
+                            <th class="sorting hidden-xs hidden-sm">Yer</th>
+                            <th class="sorting hidden-xs hidden-sm">Servis</th>
+                            <th class="sorting_1"></th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th colspan="5"> Arama kriterleriniz için {{result.length}} sonuç bulundu.</th>
+                            <th>
+                                <div class="row number-res">
+                                    <nav>
+                                        <ul class="pagination">
+                                            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+
+                                            <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr role="row" class="odd res-comp" ng-repeat="tesis in result">
+                            <td class="sorting_1 company-name">{{tesis.tesisAdi}}</td>
+                            <td>{{tesis.sahaAdi}}</td>
+                            <td>{{tesis.servis}}</td>
+                            <td class="hidden-xs hidden-sm">{{tesis.acilisSaati}}</td>
+                            <td class="hidden-xs hidden-sm">{{tesis.ucret}}</td>
+                            <td class=" dt-body-right"><button class="btn btn-success">Rezervasyon</button></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
     <section id="features">
@@ -289,4 +359,5 @@
     </section>
 
 </div>
+
 

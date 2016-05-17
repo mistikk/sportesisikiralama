@@ -61,7 +61,7 @@
     right: 20%;
 }
 
-@media screen and (max-width:660px) {
+@media screen and (max-width:60px) {
     #search {
         background-color: rgba(255, 255, 255, 0.67);
         left: 0;
@@ -83,7 +83,7 @@
 .company-name{
         font-size: 17px;
     font-weight: 700;
-
+     text-transform: capitalize;
     color:rgba(0, 0, 0, 0.82);
 }
 .res-comp{
