@@ -1,5 +1,5 @@
 ﻿'use strict';
-app.controller('homeController', ['$scope', 'loadService', '$log', function ($scope, loadService, $log) {
+app.controller('homeController', ['$scope', 'loadService', '$log', '$http', function ($scope, loadService, $log, $http) {
 
     $('.input-daterange input').each(function () {
         $(this).datepicker({
@@ -25,7 +25,7 @@ app.controller('homeController', ['$scope', 'loadService', '$log', function ($sc
     ////////////////////////////////////////////
     $scope.iller = "sa";
     $scope.formdata = {
-        sporturu: ""
+        sporTuru: ""
     }
     $scope.load = function () {
         loadService.getCities().then(function (results) {
@@ -44,10 +44,27 @@ app.controller('homeController', ['$scope', 'loadService', '$log', function ($sc
             //alert(error.data.message);
         });
     };
+
+    $scope.result = null;
     
     $scope.ara = function () {
+        $scope.formdata.il = 'sakarya';
+        $scope.formdata.ilce = 'serdivan';
+
+        if ($scope.formdata.servis == 'farketmez') {
+            $scope.formdata.servis = "";
+        }
+        else if ($scope.formdata.servis == 'var') {
+            $scope.formdata.servis = true;
+        }
+        else if ($scope.formdata.servis == 'yok') {
+            $scope.formdata.servis = false;
+        }
         console.log($scope.formdata);
-        console.info("today", $scope.formdata.tarih1);
+        $http.post('http://localhost:26264/api/tesis/search', $scope.formdata).then(function (results) {
+            $scope.result = results.data;
+            console.info("results", results.data);
+        });
     };
     $scope.today = function () {
         $scope.formdata.tarih1 = new Date();

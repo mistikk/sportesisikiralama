@@ -45,10 +45,10 @@ namespace AngularJSAuthentication.API.Controllers
         [Route("Search")]
         public IHttpActionResult Search(SearchModel searchModel)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
             List<Tesisler> tesisler = db.Tesisler.Where(x => x.sporTuru == searchModel.sporTuru &&
                                                              x.il == searchModel.il &&
                                                              x.ilce == searchModel.ilce &&
@@ -56,16 +56,31 @@ namespace AngularJSAuthentication.API.Controllers
 
             List<Tesisler> bosListe = new List<Tesisler>();
 
-            foreach (var item in tesisler)
+            foreach (var item in tesisler) //hatalı; saat araasında sadece 1 dolu olsa bile tüm saat aralığını dolu gösteriyor
             {
                 List<TesisKiralama> sa = db.TesisKiralama.Where(x => x.tesisId == item.Id &&
                                                 x.tarih >= searchModel.tarih1 &&
                                                 x.tarih <= searchModel.tarih2 &&
                                                 x.baslangicSaati >= searchModel.saat1 &&
                                                 x.bitisSaati <= searchModel.saat2).ToList();
+                Tesisler tesis = new Tesisler();
+                tesis.acilisSaati = item.acilisSaati;
+                tesis.adres = item.adres;
+                tesis.Id = item.Id;
+                tesis.il = item.il;
+                tesis.ilce = item.ilce;
+                tesis.kapanisSaati = item.kapanisSaati;
+                tesis.resim = item.resim;
+                tesis.saatDilimi = item.saatDilimi;
+                tesis.sahaAdi = item.sahaAdi;
+                tesis.servis = item.servis;
+                tesis.sporTuru = item.sporTuru;
+                tesis.telNo = item.telNo;
+                tesis.tesisAdi = item.tesisAdi;
+                tesis.ucret = item.ucret;
                 if (sa.Count == 0)
                 {
-                    bosListe.Add(item);
+                    bosListe.Add(tesis);
                 }
             }
             return Ok(bosListe);
