@@ -8,7 +8,7 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/homepage.html"
     });
     $routeProvider.when("/details", {
-        controller: "",
+        controller: "detailController",
         templateUrl: "/app/views/details.html"
     });
 

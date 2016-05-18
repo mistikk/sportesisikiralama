@@ -112,7 +112,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group services-change">
+                        <div class="form-group services-change" style="margin-left:20px;">
                             <label class="col-sm-12">Servis Seçeneği</label>
                             <div class="input-group">
                                 <input icheck ng-model="formdata.servis" value="farketmez" type="radio" name="iCheck" checked id="farketmez">
@@ -150,7 +150,7 @@
                             <div class="col-sm-11">
                                 <div class="input-group">
                                     <uib-timepicker ng-model="formdata.saat1" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></uib-timepicker>
-                                    <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                    <span class="input-group-addon" ><i style="margin:14px 0;" class="fa fa-clock-o" aria-hidden="true"></i></span>
                                     <uib-timepicker ng-model="formdata.saat2" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></uib-timepicker>
                                 </div>
                             </div>
@@ -301,7 +301,7 @@
                             <td>{{tesis.servis}}</td>
                             <td class="hidden-xs hidden-sm">{{tesis.acilisSaati}}</td>
                             <td class="hidden-xs hidden-sm">{{tesis.ucret}}</td>
-                            <td class=" dt-body-right"><button class="btn btn-success">Rezervasyon</button></td>
+                            <td class=" dt-body-right"><a href=" #/details" class="btn btn-success">Rezervasyon</a></td>
                         </tr>
 
                     </tbody>
